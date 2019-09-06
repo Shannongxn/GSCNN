@@ -38,7 +38,7 @@ from my_functionals.custom_functional import compute_grad_mag
 def perturbate_input_(input, n_elements=200):
     N, C, H, W = input.shape
     assert N == 1
-    c_ = np.random.random_integers(0, C - 1, n_elements)
+    c_ = np.random.random_integers(0, C - 1, n_elements)  # random_integers: choose n_elements number of integers in 1 to C-1 randomly 
     h_ = np.random.random_integers(0, H - 1, n_elements)
     w_ = np.random.random_integers(0, W - 1, n_elements)
     for c_idx in c_:
