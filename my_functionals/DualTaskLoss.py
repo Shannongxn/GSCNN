@@ -35,7 +35,7 @@ import torch.nn.functional as F
 import numpy as np
 from my_functionals.custom_functional import compute_grad_mag
 
-def perturbate_input_(input, n_elements=200):
+def perturbate_input_(input, n_elements=200):   # disturb input
     N, C, H, W = input.shape
     assert N == 1
     c_ = np.random.random_integers(0, C - 1, n_elements)  # random_integers: choose n_elements number of integers in 1 to C-1 randomly 
