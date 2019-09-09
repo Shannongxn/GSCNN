@@ -96,7 +96,7 @@ class DualTaskLoss(nn.Module):
     def forward(self, input_logits, gts, ignore_pixel=255):
         """
         :param input_logits: NxCxHxW
-        :param gt_semantic_masks: NxCxHxW
+        :param gt_semantic_masks: Nx1xHxW  every pixel is labeled with the class number
         :return: final loss
         """
         N, C, H, W = input_logits.shape
